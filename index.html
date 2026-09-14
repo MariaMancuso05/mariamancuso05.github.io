@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria Mancuso — Security Engineer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <span class="nav-logo">mm@security:~$</span>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-status">
+    <span class="dot"></span>
+    <span>analyst online · viareggio, it · open to relocation</span>
+  </div>
+  <h1 class="hero-name">Maria<br>Mancuso<span class="cursor"></span></h1>
+  <p class="hero-role">Security Engineer · Blue Team</p>
+  <p class="hero-bio">
+    Costruisco pipeline di detection e risposta automatizzata — dall'alert Wazuh al blocco dell'attaccante, senza intervento umano. Orientata a ruoli SOC Analyst e Security Engineer in ambienti enterprise.
+  </p>
+  <div class="hero-ctas">
+    <a href="#projects" class="btn-a">Vedi i progetti</a>
+    <a href="https://github.com/MariaMancuso05" class="btn-b">GitHub</a>
+    <a href="https://www.linkedin.com/in/maria-mancuso-847929338/" class="btn-b">LinkedIn</a>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="wrap">
+  <div class="section" id="projects">
+    <span class="sec-lbl">// progetti selezionati</span>
+    <h2 class="sec-h">Cosa ho costruito</h2>
+
+    <!-- Featured -->
+    <div class="proj-featured">
+      <div class="proj-body">
+        <span class="p-tag p-tag-c">SOAR · Detection Engineering</span>
+        <h3 class="p-title">SOAR-Honeypot Active Defense</h3>
+        <p class="p-desc">Pipeline di detection e risposta completamente automatizzata: dall'SSH brute-force rilevato da Cowrie fino al blocco via iptables, generazione del case TheHive e report NIST SP 800-61. Nessun tocco manuale.</p>
+        <div class="p-stack">
+          <span class="stag">Wazuh 4.14</span>
+          <span class="stag">Shuffle</span>
+          <span class="stag">TheHive 5</span>
+          <span class="stag">Cortex</span>
+          <span class="stag">Cowrie 3</span>
+          <span class="stag">Flask</span>
+          <span class="stag">Docker</span>
+          <span class="stag">MITRE ATT&amp;CK</span>
+        </div>
+        <a class="p-link" href="https://github.com/MariaMancuso05/soar-honeypot">Vedi su GitHub</a>
+      </div>
+
+      <!-- SVG Architecture Diagram -->
+      <div class="proj-diagram">
+        <svg viewBox="0 0 260 225" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:240px">
+          <defs>
+            <marker id="ag" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+              <path d="M0,0L5,2.5L0,5z" fill="#3d5170"/>
+            </marker>
+            <marker id="ac" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+              <path d="M0,0L5,2.5L0,5z" fill="#00c8e0" opacity=".7"/>
+            </marker>
+            <marker id="ap" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+              <path d="M0,0L5,2.5L0,5z" fill="#8b5cf6" opacity=".7"/>
+            </marker>
+            <marker id="agreen" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+              <path d="M0,0L5,2.5L0,5z" fill="#22c55e" opacity=".7"/>
+            </marker>
+          </defs>
+
+          <!-- Kali (attacker) -->
+          <rect x="6" y="88" width="56" height="26" rx="2" fill="#0d1625" stroke="#3d5170"/>
+          <text x="34" y="100" font-family="JetBrains Mono,monospace" font-size="8" fill="#6b82a8" text-anchor="middle">Kali</text>
+          <text x="34" y="110" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#3d5170" text-anchor="middle">attacker</text>
+
+          <!-- Cowrie -->
+          <rect x="95" y="14" width="74" height="26" rx="2" fill="#0d1625" stroke="#00c8e0" stroke-width="1.5"/>
+          <text x="132" y="26" font-family="JetBrains Mono,monospace" font-size="8" fill="#00c8e0" text-anchor="middle">Cowrie</text>
+          <text x="132" y="36" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#3d5170" text-anchor="middle">honeypot</text>
+
+          <!-- Wazuh -->
+          <rect x="95" y="75" width="74" height="26" rx="2" fill="#0d1625" stroke="#00c8e0" stroke-width="1.5"/>
+          <text x="132" y="87" font-family="JetBrains Mono,monospace" font-size="8" fill="#00c8e0" text-anchor="middle">Wazuh</text>
+          <text x="132" y="97" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#3d5170" text-anchor="middle">detection</text>
+
+          <!-- Shuffle -->
+          <rect x="95" y="135" width="74" height="26" rx="2" fill="#0d1625" stroke="#8b5cf6" stroke-width="1.5"/>
+          <text x="132" y="147" font-family="JetBrains Mono,monospace" font-size="8" fill="#8b5cf6" text-anchor="middle">Shuffle</text>
+          <text x="132" y="157" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#3d5170" text-anchor="middle">orchestration</text>
+
+          <!-- TheHive -->
+          <rect x="185" y="135" width="70" height="26" rx="2" fill="#0d1625" stroke="#8b5cf6" stroke-width="1.5"/>
+          <text x="220" y="147" font-family="JetBrains Mono,monospace" font-size="8" fill="#8b5cf6" text-anchor="middle">TheHive</text>
+          <text x="220" y="157" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#3d5170" text-anchor="middle">case mgmt</text>
+
+          <!-- Flask -->
+          <rect x="95" y="185" width="74" height="26" rx="2" fill="#0d1625" stroke="#22c55e" stroke-width="1.5"/>
+          <text x="132" y="197" font-family="JetBrains Mono,monospace" font-size="8" fill="#22c55e" text-anchor="middle">Flask</text>
+          <text x="132" y="207" font-family="JetBrains Mono,monospace" font-size="6.5" fill="#22c55e" text-anchor="middle">iptables DROP</text>
+
+          <!-- Kali → Cowrie (SSH attack, dashed) -->
+          <path d="M62,94 Q76,52 95,27" stroke="#3d5170" stroke-width="1" stroke-dasharray="3 2" marker-end="url(#ag)"/>
+          <text x="68" y="57" font-family="JetBrains Mono,monospace" font-size="6" fill="#3d5170" text-anchor="middle">SSH</text>
+
+          <!-- Cowrie → Wazuh -->
+          <path d="M132,40 L132,75" stroke="#00c8e0" stroke-width="1" opacity=".6" marker-end="url(#ac)"/>
+          <text x="145" y="60" font-family="JetBrains Mono,monospace" font-size="6" fill="#3d5170">alert</text>
+
+          <!-- Wazuh → Shuffle -->
+          <path d="M132,101 L132,135" stroke="#8b5cf6" stroke-width="1" opacity=".6" marker-end="url(#ap)"/>
+          <text x="145" y="120" font-family="JetBrains Mono,monospace" font-size="6" fill="#3d5170">webhook</text>
+
+          <!-- Shuffle → TheHive -->
+          <path d="M169,148 L185,148" stroke="#8b5cf6" stroke-width="1" opacity=".6" marker-end="url(#ap)"/>
+
+          <!-- Shuffle → Flask -->
+          <path d="M132,161 L132,185" stroke="#22c55e" stroke-width="1" opacity=".6" marker-end="url(#agreen)"/>
+
+          <!-- Flask → Kali (block) -->
+          <path d="M95,198 Q52,195 34,114" stroke="#22c55e" stroke-width="1" opacity=".5" stroke-dasharray="2 2" marker-end="url(#agreen)"/>
+          <text x="45" y="178" font-family="JetBrains Mono,monospace" font-size="6" fill="#22c55e" text-anchor="middle">BLOCK</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Secondary projects -->
+    <div class="proj-grid">
+      <div class="proj-card">
+        <span class="p-tag p-tag-p">Python · AI</span>
+        <h3 class="p-title">Semantic Password Analyzer</h3>
+        <p class="p-desc">Analisi della prevedibilità semantica delle password: leetspeak, pattern da tastiera, entropia Shannon e stima del crack time tramite LLM.</p>
+        <div class="p-stack" style="margin-top:auto;padding-top:.875rem">
+          <span class="stag">Python</span>
+          <span class="stag">Flask</span>
+          <span class="stag">Groq LLM</span>
+        </div>
+        <a class="p-link" href="https://github.com/MariaMancuso05" style="display:block;margin-top:.875rem">Vedi su GitHub</a>
+      </div>
+      <div class="proj-card">
+        <span class="p-tag p-tag-m">Infrastructure · Automation</span>
+        <h3 class="p-title">Ansible Wazuh Docker</h3>
+        <p class="p-desc">Deploy automatizzato di Wazuh containerizzato via Ansible: provisioning, configurazione e hardening riproducibili da zero in un solo playbook.</p>
+        <div class="p-stack" style="margin-top:auto;padding-top:.875rem">
+          <span class="stag">Ansible</span>
+          <span class="stag">Docker</span>
+          <span class="stag">Wazuh</span>
+        </div>
+        <a class="p-link" href="https://github.com/MariaMancuso05" style="display:block;margin-top:.875rem">Vedi su GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="wrap">
+  <div class="section" id="skills">
+    <span class="sec-lbl">// stack operativo</span>
+    <h2 class="sec-h">Competenze</h2>
+    <div class="skills-tbl">
+      <div class="sk-row">
+        <div class="sk-dom"><span class="sk-dom-n">Detection & SIEM</span></div>
+        <div class="sk-tools">
+          <span class="ttag">Wazuh 4.14</span><span class="ttag">OpenSearch</span><span class="ttag">Elasticsearch</span><span class="ttag">custom decoders</span><span class="ttag">alerting rules</span>
+        </div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-dom"><span class="sk-dom-n">SOAR & Incident Response</span></div>
+        <div class="sk-tools">
+          <span class="ttag">Shuffle</span><span class="ttag">TheHive 5</span><span class="ttag">Cortex</span><span class="ttag">NIST SP 800-61</span>
+        </div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-dom"><span class="sk-dom-n">Network Analysis</span></div>
+        <div class="sk-tools">
+          <span class="ttag">Wireshark</span><span class="ttag">tcpdump</span><span class="ttag">iptables</span><span class="ttag">VLAN</span><span class="ttag">TCP/IP · DNS · SSH</span>
+        </div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-dom"><span class="sk-dom-n">Infrastructure</span></div>
+        <div class="sk-tools">
+          <span class="ttag">Docker</span><span class="ttag">Apache Kafka</span><span class="ttag">OpenTelemetry</span><span class="ttag">VirtualBox</span><span class="ttag">VMware</span><span class="ttag">Linux</span>
+        </div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-dom"><span class="sk-dom-n">Scripting</span></div>
+        <div class="sk-tools">
+          <span class="ttag">Python</span><span class="ttag">Bash / Zsh</span><span class="ttag">Painless (OpenSearch)</span>
+        </div>
+      </div>
+      <div class="sk-row">
+        <div class="sk-dom"><span class="sk-dom-n">Framework</span></div>
+        <div class="sk-tools">
+          <span class="ttag">MITRE ATT&amp;CK</span><span class="ttag">NIST SP 800-61</span><span class="ttag">GDPR</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="wrap">
+  <div class="section" id="certifications">
+    <span class="sec-lbl">// formazione & certificazioni</span>
+    <h2 class="sec-h">Credenziali</h2>
+    <div class="cert-list">
+      <div class="cert-item">
+        <span class="cdot cdot-e"></span>
+        <div class="cert-info">
+          <div class="cert-n">ITS System Cybersecurity — EQF 5</div>
+          <div class="cert-iss">ITS Prodigi, Pisa</div>
+        </div>
+        <span class="cert-badge cbadge-e">110/110</span>
+      </div>
+      <div class="cert-item">
+        <span class="cdot cdot-e"></span>
+        <div class="cert-info">
+          <div class="cert-n">Introduction to Cybersecurity</div>
+          <div class="cert-iss">Cisco Networking Academy</div>
+        </div>
+        <span class="cert-badge cbadge-e">conseguita</span>
+      </div>
+      <div class="cert-item">
+        <span class="cdot cdot-p"></span>
+        <div class="cert-info">
+          <div class="cert-n">CompTIA Security+ SY0-701</div>
+          <div class="cert-iss">CompTIA</div>
+        </div>
+        <span class="cert-badge cbadge-p">in corso</span>
+      </div>
+      <div class="cert-item">
+        <span class="cdot cdot-p"></span>
+        <div class="cert-info">
+          <div class="cert-n">Google Cybersecurity Professional Certificate</div>
+          <div class="cert-iss">Google / Coursera</div>
+        </div>
+        <span class="cert-badge cbadge-p">in corso</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="wrap">
+  <div class="section" id="contact">
+    <span class="sec-lbl">// contatti</span>
+    <h2 class="sec-h">Parliamoci</h2>
+    <div class="contact-grid">
+      <div class="contact-cell">
+        <a class="contact-a" href="mailto:mariamancuso219@gmail.com">
+          <div class="contact-ch">email</div>
+          <div class="contact-v">mariamancuso219@gmail.com</div>
+        </a>
+      </div>
+      <div class="contact-cell">
+        <a class="contact-a" href="https://www.linkedin.com/in/maria-mancuso-847929338/" target="_blank">
+          <div class="contact-ch">linkedin</div>
+          <div class="contact-v">maria-mancuso-847929338</div>
+        </a>
+      </div>
+      <div class="contact-cell">
+        <a class="contact-a" href="https://github.com/MariaMancuso05" target="_blank">
+          <div class="contact-ch">github</div>
+          <div class="contact-v">MariaMancuso05</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <span>Maria Mancuso · Security Engineer · Viareggio, IT · 2026</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
